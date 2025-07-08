@@ -22,8 +22,8 @@ const reviewSchema = new mongoose.Schema({
     type: String,
   },
   hide: {
-    type: Boolea,
-    default: FileSystemDirectoryEntry,
+    type: Boolean,
+    default: false,
   }
 })
 
