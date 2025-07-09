@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Album</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>New Album</h1>
+    <p> Add a new album to your PlayList</p>
+<form action="" method="">
+    <label for="title">Album Title:</label>
+    <input type="text" name="title" id="title" />
+    <label for="artist"> By:</label>
+    <input type="text" name="artist" id="artist">
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" id="rating">
+    <label for="favSong">Favorite Song:</label>
+    <input type="text" name="favSong" id="favSong">
+    <label for="notes">Thoughts: </label>
+    <textarea name="notes" id="notes"></textarea>
+    <label for="hide">Keep Hidden?</label>
+
+    <input type="checkbox" name="hide" id="hide" />
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>
