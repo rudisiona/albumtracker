@@ -8,6 +8,21 @@
 <body>
     <%- include('../partials/_navbar.ejs') %> 
     <h1> Edit <%= review.title %> by <%= review.artist %></h1>
+    <form action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=PUT"
+        method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="<%= review.title %>"/>
+        <label for="artist"> By:</label>
+        <input type="text" name="artist" id="artist" value="<%= review.artist %>">
+        <label for="rating">Rating:</label>
+        <input type="number" name="rating" id="rating" value="<%= review.rating%>">
+        <label for="song">Favorite Song:</label>
+        <input type="text" name="song" id="song" value="<%= review.song%>">
+        <label for="notes">Thoughts: </label>
+        <textarea name="notes" id="notes" ><%= review.notes%></textarea>
+        <label for="hide">Keep Hidden?</label>
     
+        <input type="checkbox" name="hide" id="hide" value="true" <%= review.hide ? "checked" : "" %>  />
+        <button type="submit">Submit</button>
 </body>
 </html>

@@ -42,12 +42,21 @@ router.delete('/:reviewId', async (req, res) => {
     res.redirect('/users/${currentUser._id}/reviews')
 })
 
-router.get('/:applicationId/edit', async (req, res) => {
+router.get('/:reviewId/edit', async (req, res) => {
     const currentUser = await User.findById(req.session.user._id)
     const review = currentUser.reviews.id(req.params.reviewId)
-    res.render('/applications/edit.ejs', {
+    res.render('reviews/edit.ejs', {
         review: review,
+
     })
+})
+
+router.put('/:reviewId', async (req, res) => {
+    const currentUser = await User.findById(req.session.user._id)
+    const review = currentUser.reviews.id(req.params.reviewId)
+    review.set(req.body) 
+    await currentUser.save()
+    res.redirect(`/users/${currentUser._id}/reviews/${req.params.reviewId}`)
 })
 
 module.exports = router;
