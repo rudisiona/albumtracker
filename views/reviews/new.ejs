@@ -9,15 +9,15 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>New Album</h1>
     <p> Add a new album to your PlayList</p>
-<form action="" method="">
+<form action="/users/<%= user._id %>/reviews" method="POST">
     <label for="title">Album Title:</label>
     <input type="text" name="title" id="title" />
     <label for="artist"> By:</label>
     <input type="text" name="artist" id="artist">
     <label for="rating">Rating:</label>
     <input type="number" name="rating" id="rating">
-    <label for="favSong">Favorite Song:</label>
-    <input type="text" name="favSong" id="favSong">
+    <label for="song">Favorite Song:</label>
+    <input type="text" name="song" id="song">
     <label for="notes">Thoughts: </label>
     <textarea name="notes" id="notes"></textarea>
     <label for="hide">Keep Hidden?</label>

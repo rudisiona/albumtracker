@@ -36,7 +36,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  albums: [reviewSchema]
+  reviews: [reviewSchema]
 });
 
 const User = mongoose.model('User', userSchema);

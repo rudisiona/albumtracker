@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= review.title %></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= review.title %> by <%= review.artist %> </h1>
+    <p>Rating: <%= review.rating %>/5 </br> <%= review.song %> </br> <%= review.notes%> </p>
+    <a href="/users/<%= user._id %>/reviews/<%= review._id %>/edit">
+        Edit Review
+      </a>
+<form action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=DELETE"method="POST">
+    <button type="submit"> Delete Album</button>
+</form>
+
+    </html>
