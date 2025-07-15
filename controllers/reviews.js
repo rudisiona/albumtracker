@@ -18,7 +18,18 @@ router.get('/new', async (req, res) => {
 router.post('/', async(req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id)
-        currentUser.reviews.push(req.body)
+        const { title, artist, rating, song, notes } = req.body;
+        const hide = req.body.hide === 'on'
+        const newReview = {
+            title,
+            artist,
+            rating,
+            song,
+            notes,
+            hide
+        }
+       
+        currentUser.reviews.push(newReview)
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/reviews`)
     } catch (error) {
@@ -54,7 +65,13 @@ router.get('/:reviewId/edit', async (req, res) => {
 router.put('/:reviewId', async (req, res) => {
     const currentUser = await User.findById(req.session.user._id)
     const review = currentUser.reviews.id(req.params.reviewId)
-    review.set(req.body) 
+    review.title = req.body.title;
+    review.artist = req.body.artist;
+    review.rating = req.body.rating;
+    review.song = req.body.song;
+    review.notes = req.body.notes;
+    review.hide = req.body.hide === 'on'; 
+
     await currentUser.save()
     res.redirect(`/users/${currentUser._id}/reviews/${req.params.reviewId}`)
 })

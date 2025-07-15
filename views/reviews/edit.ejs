@@ -19,11 +19,11 @@
         <input type="number" name="rating" id="rating" value="<%= review.rating%>">
         <label for="song">Favorite Song:</label>
         <input type="text" name="song" id="song" value="<%= review.song%>">
-        <label for="notes">Thoughts: </label>
+        <label for="notes">Comments: </label>
         <textarea name="notes" id="notes" ><%= review.notes%></textarea>
         <label for="hide">Keep Hidden?</label>
     
-        <input type="checkbox" name="hide" id="hide" value="<%= review.hide%>"/>
+        <input type="checkbox" name="hide" id="hide" <%= review.hide ? 'checked' : '' %> />
 
         <button type="submit">Submit</button>
 </body>

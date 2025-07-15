@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Guilty Pleasures</title>
+</head>
+<body>
+
+    <%- include('../partials/_navbar.ejs') %>
+    <h1> Guilty Pleasures 🤫 </h1>
+    <% for (let review of hiddenReviews) { %>
+        <ul>
+            "<%= review.title %>" - <%=review.artist %> </br>
+            Rating: <%= review.rating%>/5 
+        
+            <% if(review.song) { %>
+            </br> 
+            Favorite Song: <%=review.song %>
+            <% } %>
+            <% if(review.notes) { %>
+            </br> Comments: <%= review.notes %>
+        
+            <% } %>
+        </ul>
+        <% } %>
+</body>
+</html>

@@ -9,7 +9,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= user.username %>'s PlayList 🎧</h1>
-<% for (let review of user.reviews) { %>
+<% for (let review of publicReviews) { %>
 <ul>
     "<%= review.title %>" - <%=review.artist %> </br>
     Rating: <%= review.rating%>/5 

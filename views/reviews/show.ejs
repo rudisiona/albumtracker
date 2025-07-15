@@ -11,6 +11,11 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= review.title %> - <%= review.artist %> </h1>
     <p>Rating: <%= review.rating %>/5 </br> Favorite Song: <%= review.song %> </br>Comments: <%= review.notes%> </p>
+   <% if(review.hide){ %>
+    <p> Hidden</p>
+  <% } else { %>
+   <p>Public </p>
+   <% } %>
     <a href="/users/<%= user._id %>/reviews/<%= review._id %>/edit">
         Edit Review
       </a>
