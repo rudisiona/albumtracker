@@ -8,16 +8,21 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= user.username %>'s PlayList</h1>
+    <h1><%= user.username %>'s PlayList 🎧</h1>
 <% for (let review of user.reviews) { %>
-<li>
-    <%= review.title %> by <%=review.artist %>
-    Rating: <%= review.rating%>/5;
+<ul>
+    "<%= review.title %>" - <%=review.artist %> </br>
+    Rating: <%= review.rating%>/5 
+
+    <% if(review.song) { %>
+    </br> 
+    Favorite Song: <%=review.song %>
+    <% } %>
     <% if(review.notes) { %>
-        <%= review.notes %>
+    </br> Comments: <%= review.notes %>
 
     <% } %>
-</li>
+</ul>
 <% } %>
 
 </body>

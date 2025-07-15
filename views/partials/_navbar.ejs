@@ -1,11 +1,11 @@
 <nav> 
     <% if(user) { %>
-        <a href="/">PlayListin'</a>
-    <a href="/users/<%= user._id %>/reviews">Your Playlist</a>
-    <a href="/users/<%=user._id %>/party">The Party</a>
+<a href="/"> PlayListin'▶️</a>
+    <!-- <a href="/users/<%= user._id %>/reviews">Your Playlist🎧</a> -->
+    <a href="/users/<%=user._id %>/party">The Party🪩</a>
     <a href="/auth/sign-out"> Sign Out</a>
     <% } else { %>
-        <a href="/">PlayListin'</a>
+        <a href="/">PlayListin'▶️ </a>
         <a href="/auth/sign-in">Sign In</a>
         <a href="/auth/sign-up">Sign Up</a>
 

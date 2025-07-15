@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Your Playlsit</title>
+    <title>Your Playlist</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %> 
-    <h1> Your PlayList</h1>
+    <h1> Your PlayList 🎧 </h1>
     <a href="/users/<%=user._id%>/reviews/new"> Add to your PlayList</a>
     <ul> <% reviews.forEach((review) => { %>
-    <li> <a href="/users/<%= user._id %>/reviews/<%=review._id %>"> <%=review.title %> By <%= review.artist %></a> Rating: <%= review.rating %>/5 </li>
+    <li> <a href="/users/<%= user._id %>/reviews/<%=review._id %>"> <%=review.title %> - <%= review.artist %></a> Rating: <%= review.rating %>/5 </li>
     <% })%>
     </ul>
 </body>
