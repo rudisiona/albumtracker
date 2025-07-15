@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Notable&display=swap');
+body {
+
+    background-color: #DB504A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #22181C;
+    font-family: "Lexend Deca", sans-serif;
+}
+h1 {
+    font-family: "Notable", sans-serif;
+    color: #5A0001
+}
+ form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20em;
+ }

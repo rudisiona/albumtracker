@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>The Party</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1> Welcome to the Party</h1>
-    <p> check out what other are listening to</p>
+    <p> check out what other users are listening to</p>
     <% if (users.length > 0) { %>
         <ul>
             <% users.forEach(user => { %>
-                <li><%= user.username %></li>
+                <li>
+                    <a href="/users/<%=user._id%>"><%= user.username %></a>
+                    </li>
             <% }) %>
         </ul>
     <% } else { %>

@@ -10,12 +10,14 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= review.title %> by <%= review.artist %> </h1>
-    <p>Rating: <%= review.rating %>/5 </br> <%= review.song %> </br> <%= review.notes%> </p>
+    <p>Rating: <%= review.rating %>/5 </br> Favorite Song: <%= review.song %> </br>Comments: <%= review.notes%> </p>
     <a href="/users/<%= user._id %>/reviews/<%= review._id %>/edit">
         Edit Review
       </a>
 <form action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=DELETE"method="POST">
     <button type="submit"> Delete Album</button>
-</form>
 
+</form>
+<% console.log(review) %>
+</body>
     </html>

@@ -23,7 +23,8 @@
         <textarea name="notes" id="notes" ><%= review.notes%></textarea>
         <label for="hide">Keep Hidden?</label>
     
-        <input type="checkbox" name="hide" id="hide" value="true" <%= review.hide ? "checked" : "" %>  />
+        <input type="checkbox" name="hide" id="hide" value="<%= review.hide%>"/>
+
         <button type="submit">Submit</button>
 </body>
 </html>
