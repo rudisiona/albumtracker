@@ -2,7 +2,7 @@
 
 ### https://playlistin-b93bbc7b368e.herokuapp.com/
 
-![playlistin website screenshot](./albumtracker2.jpg)
+![playlistin website screenshot](./albumtrack.jpg)
 
 ## Description
 "PlayListin'" is a simple app designed to help you track your favorite albums. When you sign up for PlayListin' you can rate, track your favorite songs, and comment on your favorite albums. You can also view what your others users are listening to in the "Party" feature of the app. When adding albums to your PlayList you have the option to keep the review hidden and add it to your "Guilty Pleasures" PlayList, where you are the only user that can see it.
