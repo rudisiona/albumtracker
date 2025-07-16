@@ -15,8 +15,8 @@
         <input type="text" name="title" id="title" value="<%= review.title %>"/>
         <label for="artist"> By:</label>
         <input type="text" name="artist" id="artist" value="<%= review.artist %>">
-        <label for="rating">Rating:</label>
-        <input type="number" name="rating" id="rating" value="<%= review.rating%>">
+        <label for="rating">Rating(1-5):</label>
+        <input type="number" name="rating" id="rating" max="5"value="<%= review.rating %>" required>
         <label for="song">Favorite Song:</label>
         <input type="text" name="song" id="song" value="<%= review.song%>">
         <label for="notes">Comments: </label>

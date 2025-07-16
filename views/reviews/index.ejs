@@ -12,14 +12,18 @@
     <a href="/users/<%=user._id%>/reviews/new"> Add to your PlayList</a>
     <ul> <% reviews.forEach((review) => { %>
     <li> <a href="/users/<%= user._id %>/reviews/<%=review._id %>"> <%=review.title %> - <%= review.artist %></a>
-    </br> Rating: <%= review.rating %>
+   
+    </br> Rating: <%= review.rating %>/5
+    <%if(review.song) { %>
+    </br>  Favorite Song: <%=review.song%> 
+    <%}%>
 <% if(review.notes) { %>
-</br> <%= review.notes %>
+</br>Comments: <%= review.notes %>
 <% } %> 
 <%if(review.hide) { %>
- hidden
+</br> Status: hidden
 <% }  else { %>
-    public
+</br> status: public
     <% } %>
 </li>
 

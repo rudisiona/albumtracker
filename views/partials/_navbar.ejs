@@ -1,14 +1,19 @@
+
+<link rel="stylesheet" href="/stylesheets/partials.css" />
 <nav> 
     <% if(user) { %>
+        <div class="navbar"> 
 <a href="/"> PlayListin'▶️</a>
 <a href="/users/<%=user._id%>/hidden">Guilty Pleasures🤫</a>
-    <!-- <a href="/users/<%= user._id %>/reviews">Your Playlist🎧</a> -->
     <a href="/users/<%=user._id %>/party">The Party🪩</a>
     <a href="/auth/sign-out"> Sign Out</a>
+    </div>
     <% } else { %>
+        <div class="navbar">
         <a href="/">PlayListin'▶️ </a>
         <a href="/auth/sign-in">Sign In</a>
         <a href="/auth/sign-up">Sign Up</a>
 
         <% } %>
+        </div>
     </nav>

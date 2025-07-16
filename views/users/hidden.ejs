@@ -10,9 +10,11 @@
 
     <%- include('../partials/_navbar.ejs') %>
     <h1> Guilty Pleasures 🤫 </h1>
+    <ul>
     <% for (let review of hiddenReviews) { %>
-        <ul>
-            "<%= review.title %>" - <%=review.artist %> </br>
+
+        <li>
+            <%= review.title %> - <%=review.artist %> </br>
             Rating: <%= review.rating%>/5 
         
             <% if(review.song) { %>
@@ -23,7 +25,8 @@
             </br> Comments: <%= review.notes %>
         
             <% } %>
-        </ul>
+        </li>
         <% } %>
+        </ul>
 </body>
 </html>

@@ -11,7 +11,7 @@ const userController = require('./controllers/users.js')
 const authController = require('./controllers/auth.js');
 const isSignedIn = require('./middleware/is-signed-in.js')
 const passUserToView = require('./middleware/pass-user-to-view.js')
-const port = process.env.PORT ? process.env.PORT : '3000';
+const port = process.env.PORT ? process.env.PORT : 3000;
 const path = require('path')
 mongoose.connect(process.env.MONGODB_URI);
 

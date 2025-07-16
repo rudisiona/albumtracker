@@ -63,6 +63,7 @@ router.get('/:reviewId/edit', async (req, res) => {
 })
 
 router.put('/:reviewId', async (req, res) => {
+
     const currentUser = await User.findById(req.session.user._id)
     const review = currentUser.reviews.id(req.params.reviewId)
     review.title = req.body.title;
@@ -71,6 +72,7 @@ router.put('/:reviewId', async (req, res) => {
     review.song = req.body.song;
     review.notes = req.body.notes;
     review.hide = req.body.hide === 'on'; 
+    
 
     await currentUser.save()
     res.redirect(`/users/${currentUser._id}/reviews/${req.params.reviewId}`)
