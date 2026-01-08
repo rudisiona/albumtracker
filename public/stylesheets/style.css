@@ -1,55 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Notable&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
 body {
-
-    background-color: #DB504A;
+    background: linear-gradient(
+      135deg,
+      #4B0082,  /* near-black blue */
+      #4B16B0,   /* deep indigo */
+      #4B2BDE    /* soft purple */
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #f7f4f4;
-    font-family: "Lexend Deca", sans-serif;
+    color: #BBBCED;
+    font-family: "Sigmar", sans-serif;
     font-size: 20px;
-
+    text-decoration: none;
 }
+
+a {
+     text-decoration: none;
+     color: inherit;
+}
+
+a:hover {
+    color: white;
+    cursor: pointer;
+}
+
 h1 {
-    font-family: "Notable", sans-serif;
-    color: #5A0001
+    font-family: "Shrikhand", serif;
+    color: #9180E4;
     
 }
- form {
+
+form {
     display: flex;
     flex-direction: column;
+    font-family: "Sigmar", sans-serif;
     justify-content: space-evenly;
     align-items: center;
-    color: #84190B;
+    color: #BBBCED;
+    gap: .75rem;
     padding: 10px;
     width: 20em;
- }
- ul{
+}
+
+ul {
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;   
     list-style-type: square;  
- }
+}
+
 li{
     text-align: center;
     margin: 10px;
 }
- input {
+
+input {
     border: 2px solid #220901;
     padding: 5;
+}
 
- 
-  }
- button {
+button {
     display: flex;
     justify-content: center;
+    font-family: "Sigmar", sans-serif;
+    color: white;
+    background-color: #9180E4;
+    border: 2px solid white; 
+    border-radius: 10px;
     width: 100%;
-    max-width: 100px;
+    max-width: 80px;
     margin: 5px;
   
-  }
+}
+
+button:hover {
+    color: white;
+    background-color: #40DE2A;
+    border: 2px solid white; 
+}
+.navbar {
+    font-family: "Sigmar One", sans-serif;
+    font-size: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    /* color: #2ADE2A;   
+    -webkit-text-stroke: 2px #A0DE14;    */
+    color: #BBBCED;          
+    -webkit-text-stroke: 2px #9180E4;
+}
+
+.navbar a:hover {
+    color: white;   
+    -webkit-text-stroke: 2px white;   
+}
+
+.mnavbar {
+    width: 100%;
+    max-width: 1200px;
+    font-family: "Sigmar One", sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between; /* left vs right */
+    align-items: center;            /* vertical centering */
+    padding: 1rem 2rem;
+}
+  
+.navlinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.mnavbar a {
+    font-family: "Sigmar One", sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: #BBBCED;          
+    -webkit-text-stroke: 2px #9180E4;
+    display: flex;
+}
+
+.mnavbar a:hover {
+    color: #2ADE2A;   
+    -webkit-text-stroke: 2px #A0DE14;   
+}
+
+.name:hover {
+    color: #2ADE2A;   
+    -webkit-text-stroke: 2px #A0DE14;   
+}
+
+.links a {
+    color: #BBBCED;          
+    -webkit-text-stroke: 1.5px #54498c;
+    font-size: 1.5rem;
+}
+
+.links a:hover {
+    color: #2ADE2A;   
+    -webkit-text-stroke: 2px #A0DE14;      
+}
+    
+input {
+    border: 3px solid #4B0082; 
+    padding: 0.5rem;
+    width: 175px;
+    border-radius: 8px;
+}
+
+.slogan {
+    font-size: 30px;
+    color: #9180E4;   
+    -webkit-text-stroke: 2px #A0DE14;   
+}
   
